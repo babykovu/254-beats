@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>254 BEATS — Own Your Sound | Kenya's #1 Beat Store</title>
+<meta name="description" content="Buy beats online Kenya. Afrobeats, Gengetone, Amapiano, Drill. M-Pesa checkout. Professional online mastering from 800 KES. Instant delivery."/>
+<meta name="keywords" content="buy beats kenya, afrobeats instrumentals, gengetone beats, amapiano beats nairobi, online mastering kenya, mpesa beats"/>
+<link rel="canonical" href="https://254beats.com"/>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- CURSOR -->
+<div id="cur"></div>
+<div id="cur-r"></div>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="ld-wordmark">254 BEATS</div>
+  <div class="ld-sub">Beats · Mastering · Nairobi · 2026</div>
+  <div class="ld-progress"><div class="ld-bar"></div></div>
+  <div class="ld-pct" id="ld-pct">000%</div>
+</div>
+
+<!-- TOASTS -->
+<div id="toasts"></div>
+
+<!-- CART OVERLAY -->
+<div id="cart-ov" style="position:fixed;inset:0;background:rgba(17,16,8,.35);z-index:8600;display:none;" onclick="closeCart()"></div>
+
+<!-- CART DRAWER -->
+<div id="cart">
+  <div class="cart-hdr">
+    <div class="cart-hdr-t">Your Cart</div>
+    <button class="cart-x" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cart-items"></div>
+  <div id="cart-ft"></div>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a class="nav-brand" onclick="go('home')">254 BEATS</a>
+  <ul class="nav-center">
+    <li><a onclick="go('store')" id="nl-store">Store</a></li>
+    <li><a onclick="go('mastering')" id="nl-mastering">Mastering</a></li>
+    <li><a onclick="go('club')" id="nl-club">Club</a></li>
+    <li><a onclick="go('gengetone')" id="nl-gengetone">Gengetone</a></li>
+    <li><a onclick="go('about')" id="nl-about">About</a></li>
+    <li><a onclick="go('blog')" id="nl-blog">Blog</a></li>
+    <li><a onclick="go('licensing')" id="nl-licensing">Licensing</a></li>
+  </ul>
+  <div class="nav-end">
+    <button class="nav-cart-btn" onclick="openCart()">
+      Cart <span class="cart-ct" id="cart-ct">0</span>
+    </button>
+    <a class="nav-signin" id="nav-auth-btn" onclick="go('login')">[ Sign In ]</a>
+  </div>
+  <button id="mob-btn" onclick="openMob()">☰</button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mob-menu">
+  <button id="mob-close" onclick="closeMob()">✕</button>
+  <a class="mob-link" onclick="go('store');closeMob()">Store</a>
+  <a class="mob-link" onclick="go('mastering');closeMob()">Mastering</a>
+  <a class="mob-link" onclick="go('club');closeMob()">Club</a>
+  <a class="mob-link" onclick="go('gengetone');closeMob()">Gengetone</a>
+  <a class="mob-link" onclick="go('about');closeMob()">About</a>
+  <a class="mob-link" onclick="go('blog');closeMob()">Blog</a>
+  <a class="mob-link" onclick="go('licensing');closeMob()">Licensing</a>
+  <a class="mob-link" onclick="go('contact');closeMob()">Contact</a>
+  <a class="mob-link" onclick="go('login');closeMob()">Sign In</a>
+</div>
+
+<!-- HOME PAGE -->
+<div class="pg on" id="pg-home">
+<section id="hero" class="vid-wrap">
+  <video class="vid-bg" autoplay muted loop playsinline>
+    <source src="videos/9150545-hd_1920_1080_24fps.mp4" type="video/mp4"/>
+  </video>
+  <div class="vid-ov hero-ov"></div>
+  <div class="hero-body">
+    <h1 class="hero-h"><span class="ht">Own Your</span>Sound.</h1>
+    <div class="hero-r">
+      <p class="hero-eye">254 Beats · Nairobi · Est. 2026</p>
+      <p class="hero-sub">Beats that hit different. From 399 bob. M-Pesa ndio form. No excuses — just music.</p>
+      <div class="hero-acts">
+        <button class="btn btn-ink" onclick="go('store')">Enter the Store</button>
+        <button class="btn btn-ghost" onclick="go('mastering')">Master Your Track</button>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <div class="scroll-txt">Scroll</div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="mq"><div class="mq-inner"><div class="mq-track">
+  <div class="mq-item">AFROBEATS<span class="mq-dot">◆</span>GENGETONE<span class="mq-dot">◆</span>AMAPIANO<span class="mq-dot">◆</span>DRILL<span class="mq-dot">◆</span>TRAP<span class="mq-dot">◆</span>AFROPOP<span class="mq-dot">◆</span>BONGO FLAVA<span class="mq-dot">◆</span>DANCEHALL<span class="mq-dot">◆</span>R&B<span class="mq-dot">◆</span>GENGE<span class="mq-dot">◆</span></div>
+  <div class="mq-item">AFROBEATS<span class="mq-dot">◆</span>GENGETONE<span class="mq-dot">◆</span>AMAPIANO<span class="mq-dot">◆</span>DRILL<span class="mq-dot">◆</span>TRAP<span class="mq-dot">◆</span>AFROPOP<span class="mq-dot">◆</span>BONGO FLAVA<span class="mq-dot">◆</span>DANCEHALL<span class="mq-dot">◆</span>R&B<span class="mq-dot">◆</span>GENGE<span class="mq-dot">◆</span></div>
+</div></div></div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat rv"><div class="stat-n"><span class="cnt" data-t="2847">0</span><span class="stat-p">+</span></div><div class="stat-l">Beats Sold</div></div>
+  <div class="stat rv d1"><div class="stat-n"><span class="cnt" data-t="612">0</span><span class="stat-p">+</span></div><div class="stat-l">Artists Served</div></div>
+  <div class="stat rv d2"><div class="stat-n"><span class="cnt" data-t="891">0</span><span class="stat-p">+</span></div><div class="stat-l">Tracks Mastered</div></div>
+</div>
+
+<!-- CONTENT SECTIONS -->
+<section class="split">
+  <div class="split-txt">
+    <span class="sec-num">001</span>
+    <div class="tag rv">The Sound</div>
+    <h2 class="h1 rv"><span class="ht">Beats That</span>Hit Different</h2>
+    <p class="body-txt rv d1">Every beat in the store is crafted for one mission — to make your track undeniable. From the streets of Nairobi to every streaming platform on earth.</p>
+    <a class="txt-link rv d2" onclick="go('store')">Browse the store</a>
+  </div>
+  <div class="split-vid">
+    <video autoplay muted loop playsinline>
+      <source src="videos/4990246-hd_1920_1080_30fps.mp4" type="video/mp4"/>
+    </video>
+    <div class="split-vid-ov"></div>
+  </div>
+</section>
+
+<section class="split">
+  <div class="split-vid">
+    <video autoplay muted loop playsinline>
+      <source src="videos/5908584-hd_1920_1080_25fps.mp4" type="video/mp4"/>
+    </video>
+    <div class="split-vid-ov"></div>
+  </div>
+  <div class="split-txt r">
+    <span class="sec-num">002</span>
+    <div class="tag rv">The License</div>
+    <h2 class="h1 rv"><span class="ht">Five</span>License Tiers</h2>
+    <p class="body-txt rv d1">Demo-only at 399 KES to full exclusive ownership. Every tier includes M-Pesa checkout, instant delivery, and a PDF license agreement.</p>
+    <a class="txt-link rv d2" onclick="go('licensing')">View licensing tiers</a>
+  </div>
+</section>
+
+<!-- FEATURED BEATS -->
+<section class="home-beats">
+  <div class="hb-header rv">
+    <div class="hb-title"><span class="hb-thin">Featured</span>Beats</div>
+    <button class="btn btn-ghost" onclick="go('store')">View All →</button>
+  </div>
+  <div class="beats-grid" id="home-beats-grid"></div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi">
+  <p class="testi-ey rv">Artist Testimonials — Real Words From Real Artists</p>
+  <div class="testi-grid">
+    <div class="tcard rv">
+      <div class="tcard-q">The beats from 254 are on another level. Bought the Amapiano exclusive and dropped a hit same week. M-Pesa checkout was smoother than any US platform I've used.</div>
+      <div class="tcard-name">Khalid Omar</div>
+      <div class="tcard-role">Afrobeats Artist, Nairobi</div>
+    </div>
+    <div class="tcard rv d1">
+      <div class="tcard-q">The mastering portal is insane. Uploaded my track at midnight, had it mastered and delivered by 6am. It slaps harder than anything my studio engineer has touched.</div>
+      <div class="tcard-name">Queen Zawadi</div>
+      <div class="tcard-role">Gengetone Artist, Kibera</div>
+    </div>
+    <div class="tcard rv d2">
+      <div class="tcard-q">I've used Beatstars and every US platform. 254 Beats hits different because it's built for us. Kenyan sounds, Kenyan prices, M-Pesa. This is the future of the game.</div>
+      <div class="tcard-name">Marcus Weru</div>
+      <div class="tcard-role">Drill Producer, Westlands</div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
